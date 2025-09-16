@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/src/assets/troubleshooting.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Review AI</title>
+    <style>
+      .code-editor {
+          font-family: 'Fira Code', 'Consolas', 'Monaco', monospace !important;
+          font-size: 14px !important;
+          line-height: 1.5 !important;
+          min-height: 400px;
+          caret-color: #c0caf5; /* brand-text */
+      }
+
+      .code-editor > textarea:focus {
+          outline: none;
+      }
+
+      .code-editor > textarea,
+      .code-editor > pre {
+        /* Add padding for the editor and space for the line numbers gutter */
+        padding: 10px 10px 10px 4.5em !important;
+      }
+
+      /* Use CSS counters to generate line numbers */
+      .code-editor > pre {
+        counter-reset: line;
+      }
+      .code-editor .line {
+        display: block;
+        position: relative;
+      }
+      .code-editor .line::before {
+        content: counter(line);
+        counter-increment: line;
+        position: absolute;
+        left: -4.5em; /* Position in parent's padding */
+        width: 3.5em;  /* Width of gutter */
+        padding-right: 1em; /* Space between number and code */
+        text-align: right;
+        color: #565f89; /* brand-muted */
+        user-select: none; /* Make numbers unselectable */
+      }
+
+      /* Custom scrollbar styling for the editor */
+      .code-editor > textarea::-webkit-scrollbar {
+          width: 10px;
+      }
+      .code-editor > textarea::-webkit-scrollbar-track {
+          background: #1a1b26;
+      }
+      .code-editor > textarea::-webkit-scrollbar-thumb {
+          background-color: #444b6a;
+          border-radius: 5px;
+      }
+      .code-editor > textarea::-webkit-scrollbar-thumb:hover {
+          background-color: #565f89;
+      }
+      .code-editor > textarea::placeholder {
+        color: #565f89; /* brand-muted */
+        opacity: 1; /* Firefox requires this */
+      }
+      
+      @keyframes shake {
+        10%, 90% { transform: translate3d(-1px, 0, 0); }
+        20%, 80% { transform: translate3d(2px, 0, 0); }
+        30%, 50%, 70% { transform: translate3d(-3px, 0, 0); }
+        40%, 60% { transform: translate3d(3px, 0, 0); }
+      }
+      .shake {
+        animation: shake 0.6s cubic-bezier(.36,.07,.19,.97) both;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.19.0",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react-dropzone-esm": "https://aistudiocdn.com/react-dropzone-esm@^15.2.0",
+    "react-simple-code-editor": "https://aistudiocdn.com/react-simple-code-editor@^0.13.1",
+    "prismjs/": "https://aistudiocdn.com/prismjs@^1.29.0/",
+    "prismjs": "https://aistudiocdn.com/prismjs@^1.29.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-brand-bg text-brand-text">
+    <div id="root"></div>
+    <script src="https://cdn.jsdelivr.net/npm/eslint-linter-browserify@8.57.0/dist/eslint-linter-browserify.js"></script>
+    <script src="https://unpkg.com/prettier@3.3.2/standalone.js"></script>
+    <script src="https://unpkg.com/prettier@3.3.2/plugins/estree.js"></script>
+    <script src="https://unpkg.com/prettier@3.3.2/plugins/babel.js"></script>
+    <script src="https://unpkg.com/prettier@3.3.2/plugins/typescript.js"></script>
+    <script src="https://unpkg.com/prettier@3.3.2/plugins/html.js"></script>
+    <script src="https://unpkg.com/prettier@3.3.2/plugins/css.js"></script>
+    <script src="https://unpkg.com/prettier@3.3.2/plugins/markdown.js"></script>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

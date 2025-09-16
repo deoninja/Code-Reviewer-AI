@@ -1,0 +1,111 @@
+@import 'tailwindcss';
+
+/* Import Prism Night Owl theme */
+@import 'prism-themes/themes/prism-night-owl.css';
+
+/* Custom theme colors */
+@theme {
+  --color-brand-bg: #1a1b26;
+  --color-brand-surface: #24283b;
+  --color-brand-overlay: #3b4261;
+  --color-brand-muted: #565f89;
+  --color-brand-subtle: #737aa2;
+  --color-brand-text: #c0caf5;
+  --color-brand-love: #bb9af7;
+  --color-brand-gold: #e0af68;
+  --color-brand-rose: #f7768e;
+  --color-brand-pine: #3d59a1;
+  --color-brand-foam: #7aa2f7;
+  --color-brand-iris: #9d7cd8;
+  --color-brand-highlight-low: #292e42;
+  --color-brand-highlight-med: #444b6a;
+  --color-brand-highlight-high: #565f89;
+}
+
+/* =======================
+   Code Editor Styles
+   ======================= */
+.code-editor {
+  font-family: 'Fira Code', 'Consolas', 'Monaco', monospace !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  min-height: 400px;
+  caret-color: var(--color-brand-text);
+}
+
+.code-editor > textarea:focus {
+  outline: none;
+}
+
+.code-editor > textarea,
+.code-editor > pre {
+  /* Add padding for the editor and space for the line numbers gutter */
+  padding: 10px 10px 10px 4.5em !important;
+}
+
+/* Line numbers using CSS counters */
+.code-editor > pre {
+  counter-reset: line;
+}
+.code-editor .line {
+  display: block;
+  position: relative;
+}
+.code-editor .line::before {
+  content: counter(line);
+  counter-increment: line;
+  position: absolute;
+  left: -4.5em; /* Position in parent's padding */
+  width: 3.5em; /* Width of gutter */
+  padding-right: 1em; /* Space between number and code */
+  text-align: right;
+  color: var(--color-brand-muted);
+  user-select: none; /* Make numbers unselectable */
+}
+
+/* =======================
+   Custom Scrollbar
+   ======================= */
+.code-editor > textarea::-webkit-scrollbar {
+  width: 10px;
+}
+.code-editor > textarea::-webkit-scrollbar-track {
+  background: var(--color-brand-bg);
+}
+.code-editor > textarea::-webkit-scrollbar-thumb {
+  background-color: var(--color-brand-highlight-med);
+  border-radius: 5px;
+}
+.code-editor > textarea::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-brand-highlight-high);
+}
+.code-editor > textarea::placeholder {
+  color: var(--color-brand-muted);
+  opacity: 1; /* Firefox requires this */
+}
+
+/* =======================
+   Shake Animation
+   ======================= */
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-3px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(3px, 0, 0);
+  }
+}
+.shake {
+  animation: shake 0.6s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
