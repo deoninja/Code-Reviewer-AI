@@ -1,3 +1,40 @@
+# Code Reviewer AI
+
+[![GitHub stars](https://img.shields.io/github/stars/deoninja/Code-Reviewer-AI.svg)](https://github.com/deoninja/Code-Reviewer-AI/stargazers)
+
+Code Reviewer AI is a powerful tool that leverages artificial intelligence to analyze your code and provide feedback. It helps you identify potential bugs, improve code quality, and enforce best practices.
+
+## Table of Contents
+
+- [Running Locally](#running-locally)
+- [AI Provider Setup](#ai-provider-setup)
+  - [Option 1: Google Gemini (Cloud-based)](#option-1-google-gemini-cloud-based)
+  - [Option 2: Ollama (Local AI - Completely Offline)](#option-2-ollama-local-ai---completely-offline)
+  - [Option 3: LM Studio (Local AI with GUI)](#option-3-lm-studio-local-ai-with-gui)
+- [Comparing AI Providers](#comparing-ai-providers)
+- [Recommended Configurations](#recommended-configurations)
+- [Contributing](#contributing)
+
+## Running Locally
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/deoninja/Code-Reviewer-AI.git
+    cd Code-Reviewer-AI
+    ```
+
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+
+3.  **Run the development server:**
+    ```bash
+    npm run dev
+    ```
+
+4.  Open your browser and navigate to `http://localhost:5173` (or the address shown in your terminal).
+
 ## AI Provider Setup
 
 ### Option 1: Google Gemini (Cloud-based)
@@ -198,6 +235,11 @@ LM Studio provides a user-friendly interface for running local language models w
 ### For High-End Hardware (16GB+ RAM)
 - **Ollama**: `llama3.1:13b` or `codellama:13b`
 - **LM Studio**: Llama 3.1 8B with Q8_0 quantization
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a pull request or open an issue to discuss your ideas.
+
 ---
 
 All rights reserved Deo Trinidad ©️ 2025
