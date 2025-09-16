@@ -1,14 +1,19 @@
 # Code Reviewer AI
 
+[![Live Demo](https://img.shields.io/badge/live-demo-brightgreen.svg)](https://code-reviewer-ai.netlify.app/)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/deoninja/Code-Reviewer-AI)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/deoninja/Code-Reviewer-AI/blob/main/LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/deoninja/Code-Reviewer-AI.svg)](https://github.com/deoninja/Code-Reviewer-AI/stargazers)
 
 Code Reviewer AI is a powerful tool that leverages artificial intelligence to analyze your code and provide feedback. It helps you identify potential bugs, improve code quality, and enforce best practices.
 
+### Screenshot
 ![Screenshot](src/assets/troubleshooting.png)
 
 ## Table of Contents
 
+- [Features](#features)
+- [Technologies](#technologies)
 - [Running Locally](#running-locally)
 - [AI Provider Setup](#ai-provider-setup)
   - [Option 1: Google Gemini (Cloud-based)](#option-1-google-gemini-cloud-based)
@@ -18,6 +23,33 @@ Code Reviewer AI is a powerful tool that leverages artificial intelligence to an
 - [Recommended Configurations](#recommended-configurations)
 - [Contributing](#contributing)
 - [License](#license)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
+- [Project Status](#project-status)
+- [Future Plans](#future-plans)
+- [Bug Reports](#bug-reports)
+- [Feature Requests](#feature-requests)
+- [Support](#support)
+- [Code of Conduct](#code-of-conduct)
+
+## Features
+
+- **AI-powered Code Review:** Get intelligent feedback on your code.
+- **Multiple AI Providers:** Choose between Google Gemini, Ollama (Local), and LM Studio (Local).
+- **File Tree Navigation:** Easily browse and select files from your project.
+- **Code Formatting:** Format your code with the click of a button.
+- **Linter Integration:** Identify and fix syntax errors and style issues.
+- **Welcome Message:** Get started quickly with a helpful welcome message.
+
+## Technologies
+
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [@google/genai](https://www.npmjs.com/package/@google/genai)
+- [prismjs](https://prismjs.com/)
+- [react-simple-code-editor](https://www.npmjs.com/package/react-simple-code-editor)
 
 ## Running Locally
 
@@ -242,12 +274,49 @@ LM Studio provides a user-friendly interface for running local language models w
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a pull request or open an issue to discuss your ideas.
+Contributions are welcome! Please see our [Contributing Guide](CONTRIBUTING.md) for more information.
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+## Author
+
+- [Deo Trinidad](https://github.com/deoninja)
+
+## Acknowledgments
+
+- This project was inspired by the need for a simple and effective code review tool.
+
+## Project Status
+
+This project is currently in active development.
+
+## Future Plans
+
+- [ ] Add support for more AI providers.
+- [ ] Implement user authentication.
+- [ ] Add more options for code formatting.
+- [ ] Improve the UI/UX.
+
+## Bug Reports
+
+Please report any bugs or issues you find by opening an issue on the [GitHub repository](https://github.com/deoninja/Code-Reviewer-AI/issues).
+
+## Feature Requests
+
+If you have an idea for a new feature, please open an issue on the [GitHub repository](https://github.com/deoninja/Code-Reviewer-AI/issues) to discuss it.
+
+## Support
+
+For support, please open an issue on the [GitHub repository](https://github.com/deoninja/Code-Reviewer-AI/issues).
+
+## Code of Conduct
+
+Please read our [Code of Conduct](CODE_OF_CONDUCT.md) for details on our code of conduct and the process for submitting a report.
+
 ---
 
 All rights reserved Deo Trinidad ©️ 2025
+
+[Back to top](#code-reviewer-ai)
