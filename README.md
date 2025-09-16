@@ -200,4 +200,4 @@ LM Studio provides a user-friendly interface for running local language models w
 - **LM Studio**: Llama 3.1 8B with Q8_0 quantization
 ---
 
-All rights reserved Deo Trinidad 2025
+All rights reserved Deo Trinidad ©️ 2025
