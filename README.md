@@ -1,8 +1,11 @@
 # Code Reviewer AI
 
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/deoninja/Code-Reviewer-AI/blob/main/LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/deoninja/Code-Reviewer-AI.svg)](https://github.com/deoninja/Code-Reviewer-AI/stargazers)
 
 Code Reviewer AI is a powerful tool that leverages artificial intelligence to analyze your code and provide feedback. It helps you identify potential bugs, improve code quality, and enforce best practices.
+
+![Screenshot](src/assets/troubleshooting.png)
 
 ## Table of Contents
 
@@ -14,6 +17,7 @@ Code Reviewer AI is a powerful tool that leverages artificial intelligence to an
 - [Comparing AI Providers](#comparing-ai-providers)
 - [Recommended Configurations](#recommended-configurations)
 - [Contributing](#contributing)
+- [License](#license)
 
 ## Running Locally
 
@@ -239,6 +243,10 @@ LM Studio provides a user-friendly interface for running local language models w
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a pull request or open an issue to discuss your ideas.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
