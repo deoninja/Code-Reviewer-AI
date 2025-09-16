@@ -1,13 +1,13 @@
 # Code Reviewer AI
 
 [![Live Demo](https://img.shields.io/badge/live-demo-brightgreen.svg)](https://code-reviewer-ai.netlify.app/)
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/deoninja/Code-Reviewer-AI)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/deoninja/Code-Reviewer-AI/blob/main/LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/deoninja/Code-Reviewer-AI.svg)](https://github.com/deoninja/Code-Reviewer-AI/stargazers)
 
 Code Reviewer AI is a powerful tool that leverages artificial intelligence to analyze your code and provide feedback. It helps you identify potential bugs, improve code quality, and enforce best practices.
 
 ### Screenshot
+
 ![Screenshot](src/assets/troubleshooting.png)
 
 ## Table of Contents
@@ -54,17 +54,20 @@ Code Reviewer AI is a powerful tool that leverages artificial intelligence to an
 ## Running Locally
 
 1.  **Clone the repository:**
+
     ```bash
     git clone https://github.com/deoninja/Code-Reviewer-AI.git
     cd Code-Reviewer-AI
     ```
 
 2.  **Install dependencies:**
+
     ```bash
     npm install
     ```
 
 3.  **Run the development server:**
+
     ```bash
     npm run dev
     ```
@@ -77,12 +80,13 @@ Code Reviewer AI is a powerful tool that leverages artificial intelligence to an
 
 1. Visit [Google AI Studio](https://aistudio.google.com/app/apikey)
 2. Sign in with your Google account
-3. Click "Create API Key" 
+3. Click "Create API Key"
 4. Choose "Create API key in new project" or select an existing project
 5. Copy the generated API key
 6. **Important**: Keep your API key secure and never share it publicly
 
 #### API Key Limits
+
 - Gemini API has generous free tier limits
 - Rate limits apply (requests per minute)
 - Monitor your usage in the Google AI Studio dashboard
@@ -94,16 +98,19 @@ Ollama allows you to run large language models locally on your machine, providin
 #### Installing Ollama
 
 **Windows:**
+
 1. Download Ollama from [https://ollama.ai/download](https://ollama.ai/download)
 2. Run the installer and follow the setup wizard
 3. Ollama will automatically start as a service
 
 **macOS:**
+
 1. Download Ollama from [https://ollama.ai/download](https://ollama.ai/download)
 2. Drag Ollama to your Applications folder
 3. Run Ollama from Applications
 
 **Linux:**
+
 ```bash
 curl -fsSL https://ollama.ai/install.sh | sh
 ```
@@ -111,21 +118,23 @@ curl -fsSL https://ollama.ai/install.sh | sh
 #### Setting Up Models
 
 1. **Install a recommended model** (choose one based on your system):
+
    ```bash
    # For systems with 8GB+ RAM - Good balance of speed and quality
    ollama pull llama3.1:8b
-   
+
    # For systems with 16GB+ RAM - Better quality
    ollama pull llama3.1:13b
-   
+
    # For systems with 4-8GB RAM - Faster but lower quality
    ollama pull llama3.1:3b
-   
+
    # Alternative: Code-specific model
    ollama pull codellama:7b
    ```
 
 2. **Verify Ollama is running**:
+
    ```bash
    ollama list
    ```
@@ -148,15 +157,18 @@ curl -fsSL https://ollama.ai/install.sh | sh
 #### Ollama Troubleshooting
 
 **Ollama not responding:**
+
 - Check if Ollama service is running: `ollama ps`
 - Restart Ollama: `ollama serve`
 - Check firewall settings (port 11434)
 
 **Model not found:**
+
 - List installed models: `ollama list`
 - Pull the model again: `ollama pull model-name`
 
 **Performance issues:**
+
 - Use a smaller model for faster responses
 - Close other memory-intensive applications
 - Consider upgrading RAM for larger models
@@ -168,6 +180,7 @@ LM Studio provides a user-friendly interface for running local language models w
 #### Installing LM Studio
 
 1. **Download LM Studio**:
+
    - Visit [https://lmstudio.ai/](https://lmstudio.ai/)
    - Download for your operating system (Windows, macOS, Linux)
    - Install following the standard process
@@ -180,6 +193,7 @@ LM Studio provides a user-friendly interface for running local language models w
 #### Setting Up Models in LM Studio
 
 1. **Browse and Download Models**:
+
    - Open LM Studio
    - Go to the "Discover" tab
    - Search for recommended models:
@@ -189,6 +203,7 @@ LM Studio provides a user-friendly interface for running local language models w
      - **Phi-3 Mini** - Lightweight option
 
 2. **Download a Model**:
+
    - Click on your chosen model
    - Select the quantization level:
      - **Q4_K_M** - Good balance of quality and speed (recommended)
@@ -205,6 +220,7 @@ LM Studio provides a user-friendly interface for running local language models w
 #### Starting LM Studio Server
 
 1. **Enable Server Mode**:
+
    - Go to the "Local Server" tab in LM Studio
    - Select your loaded model
    - Click "Start Server"
@@ -227,48 +243,55 @@ LM Studio provides a user-friendly interface for running local language models w
 #### LM Studio Troubleshooting
 
 **Server won't start:**
+
 - Ensure a model is loaded in the Chat tab first
 - Check if port 1234 is available
 - Restart LM Studio
 
 **Connection refused:**
+
 - Verify the server is running (green status in Local Server tab)
 - Check the URL in settings matches LM Studio's server URL
 - Disable firewall/antivirus temporarily to test
 
 **Poor performance:**
+
 - Try a smaller model or lower quantization
 - Adjust context length in LM Studio settings
 - Close other applications to free up RAM
 
 ## Comparing AI Providers
 
-| Feature | Gemini (Cloud) | Ollama (Local) | LM Studio (Local) |
-|---------|----------------|----------------|-------------------|
-| **Setup Difficulty** | Easy | Medium | Easy |
-| **Internet Required** | Yes | No | No |
-| **Privacy** | Data sent to Google | Complete privacy | Complete privacy |
-| **Speed** | Fast | Depends on hardware | Depends on hardware |
-| **Cost** | Free tier, then paid | Free | Free |
-| **Model Quality** | Very High | High (varies by model) | High (varies by model) |
-| **RAM Requirements** | None | 4-16GB+ | 4-16GB+ |
-| **Best For** | Quick setup, high quality | Privacy, offline use | User-friendly local AI |
+| Feature               | Gemini (Cloud)            | Ollama (Local)         | LM Studio (Local)      |
+| --------------------- | ------------------------- | ---------------------- | ---------------------- |
+| **Setup Difficulty**  | Easy                      | Medium                 | Easy                   |
+| **Internet Required** | Yes                       | No                     | No                     |
+| **Privacy**           | Data sent to Google       | Complete privacy       | Complete privacy       |
+| **Speed**             | Fast                      | Depends on hardware    | Depends on hardware    |
+| **Cost**              | Free tier, then paid      | Free                   | Free                   |
+| **Model Quality**     | Very High                 | High (varies by model) | High (varies by model) |
+| **RAM Requirements**  | None                      | 4-16GB+                | 4-16GB+                |
+| **Best For**          | Quick setup, high quality | Privacy, offline use   | User-friendly local AI |
 
 ## Recommended Configurations
 
 ### For Beginners
+
 - **Start with**: Gemini (easiest setup)
 - **Upgrade to**: LM Studio (user-friendly local option)
 
 ### For Privacy-Conscious Users
+
 - **Recommended**: Ollama with Llama 3.1 8B
 - **Alternative**: LM Studio with Code Llama 7B
 
 ### For Low-End Hardware (4-8GB RAM)
+
 - **Ollama**: `llama3.1:3b` or `phi3:mini`
 - **LM Studio**: Phi-3 Mini with Q4_K_M quantization
 
 ### For High-End Hardware (16GB+ RAM)
+
 - **Ollama**: `llama3.1:13b` or `codellama:13b`
 - **LM Studio**: Llama 3.1 8B with Q8_0 quantization
 
