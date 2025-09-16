@@ -8,7 +8,7 @@ Code Reviewer AI is a powerful tool that leverages artificial intelligence to an
 
 ### Screenshot
 
-![Screenshot](src/assets/troubleshooting.png)
+![Screenshot](src/assets/Screenshot_10.png)
 
 ## Table of Contents
 
